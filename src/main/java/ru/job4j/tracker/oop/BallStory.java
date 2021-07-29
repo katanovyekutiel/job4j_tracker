@@ -11,4 +11,5 @@ public class BallStory {
         wolf.eat(ball);
         fox.eat(ball);
     }
+
 }
