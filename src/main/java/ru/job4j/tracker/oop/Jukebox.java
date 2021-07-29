@@ -1,7 +1,7 @@
 package ru.job4j.tracker.oop;
 
 public class Jukebox {
-    public static void music(int position) {
+    public void music(int position) {
         if (position == 1) {
             System.out.println("Пусть бегут неуклюже");
         } else if (position == 2) {
@@ -12,7 +12,7 @@ public class Jukebox {
     }
 
     public static void main(String[] args) {
-        Jukebox music = new Jukebox();
-        music(2);
+        Jukebox box = new Jukebox();
+        box.music(2);
     }
 }
