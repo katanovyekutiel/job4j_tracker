@@ -8,10 +8,10 @@ public class Error {
 
     private String message;
 
-    public Error() {
-        active = true;
-        status = 770;
-        message = "Hello World";
+    public Error(boolean active, int status, String message) {
+        this.active = true;
+        this.status = 770;
+        this.message = "Hello World";
     }
 
     public void printInfo() {
@@ -21,7 +21,9 @@ public class Error {
     }
 
     public static void main(String[] args) {
-        Error error = new Error();
+        Error error = new Error(true, 770, "Hello World");
         error.printInfo();
+        Error error1 = new Error(true, 777, "Goodbye World");
+        error1.printInfo();
     }
 }
