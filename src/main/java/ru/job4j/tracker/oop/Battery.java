@@ -17,7 +17,7 @@ public class Battery {
         Battery two = new Battery(5);
         System.out.println("battery one : " + one.value
                 + "    battery two : " + two.value);
-        two.exchange(one);
+        one.exchange(two);
         System.out.println("battery one : " + one.value
                 + "    battery two : " + two.value);
     }
