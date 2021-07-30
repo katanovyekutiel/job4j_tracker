@@ -15,9 +15,6 @@ public class Error {
     }
 
     public Error() {
-        this.active = active;
-        this.status = status;
-        this.message = message;
     }
 
     public void printInfo() {
