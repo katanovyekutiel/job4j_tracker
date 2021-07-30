@@ -28,4 +28,5 @@ public class Point {
         double dist = a.distance3d(b);
         System.out.println(dist);
     }
+
 }
