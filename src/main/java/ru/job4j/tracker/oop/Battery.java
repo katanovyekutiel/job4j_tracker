@@ -9,7 +9,7 @@ public class Battery {
 
     public void exchange(Battery another) {
         another.value += this.value;
-        another.value = 0;
+        this.value = 0;
     }
 
     public static void main(String[] args) {
@@ -21,4 +21,5 @@ public class Battery {
         System.out.println("battery one : " + one.value
                 + "    battery two : " + two.value);
     }
+
 }
