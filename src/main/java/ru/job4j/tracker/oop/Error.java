@@ -9,9 +9,15 @@ public class Error {
     private String message;
 
     public Error(boolean active, int status, String message) {
-        this.active = true;
-        this.status = 770;
-        this.message = "Hello World";
+        this.active = active;
+        this.status = status;
+        this.message = message;
+    }
+
+    public Error() {
+        this.active = active;
+        this.status = status;
+        this.message = message;
     }
 
     public void printInfo() {
@@ -25,5 +31,7 @@ public class Error {
         error.printInfo();
         Error error1 = new Error(true, 777, "Goodbye World");
         error1.printInfo();
+        Error error2 = new Error();
+        error2.printInfo();
     }
 }
