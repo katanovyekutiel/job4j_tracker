@@ -1,10 +1,13 @@
 package ru.job4j.tracker;
 
+import junit.framework.TestCase;
 import org.junit.Test;
+
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
-public class TrackerTest {
+public class TrackerTest extends TestCase {
+
     @Test
     public void whenAddNewItemThenTrackerHasSameItem() {
         Tracker tracker = new Tracker();

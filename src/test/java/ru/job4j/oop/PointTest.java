@@ -1,11 +1,11 @@
-package ru.job4j.tracker.oop;
+package ru.job4j.oop;
 
 import static org.hamcrest.Matchers.closeTo;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Assert;
 import org.junit.Test;
-import ru.job4j.tracker.oop.Point;
+import ru.job4j.oop.Point;
 
 public class PointTest {
 
