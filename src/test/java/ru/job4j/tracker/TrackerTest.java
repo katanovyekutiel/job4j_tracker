@@ -8,8 +8,7 @@ import static org.junit.Assert.assertThat;
 
 public class TrackerTest extends TestCase {
 
-    @Test
-    public void whenAddNewItemThenTrackerHasSameItem() {
+    public void testWhenAddNewItemThenTrackerHasSameItem() {
         Tracker tracker = new Tracker();
         Item item = new Item();
         item.setName("test1");
