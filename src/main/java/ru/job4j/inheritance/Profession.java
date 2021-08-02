@@ -1,4 +1,4 @@
-package ru.job4j.tracker;
+package ru.job4j.inheritance;
 
 public class Profession {
     private int id;
@@ -36,10 +36,18 @@ public class Profession {
     }
 
     public class Surgeon extends Doctor() {
+        this.id = id;
+        this.surname = surname;
+        this.education = education;
+        this.birthday = birthday;
         boolean operating;
     }
 
     public class Dentist extends Doctor() {
+        this.id = id;
+        this.surname = surname;
+        this.education = education;
+        this.birthday = birthday;
         boolean treatsTeeth;
     }
 
@@ -48,10 +56,18 @@ public class Profession {
     }
 
     public class Programmer extends Engineer() {
+        this.id = id;
+        this.surname = surname;
+        this.education = education;
+        this.birthday = birthday;
         boolean programming;
     }
 
     public class Builder extends Engineer() {
+        this.id = id;
+        this.surname = surname;
+        this.education = education;
+        this.birthday = birthday;
         boolean building;
     }
 
