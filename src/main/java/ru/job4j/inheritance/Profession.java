@@ -72,7 +72,7 @@ public class Profession {
     }
 
     public static void main(String[] args) {
-        Programmer Yekutiel = new Programmer();
-        Yekutiel.printInfo();
+        Programmer yekutiel = new Programmer();
+        yekutiel.printInfo();
     }
 }
