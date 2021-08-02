@@ -8,13 +8,6 @@ public class Profession {
 
     public Profession() {}
 
-    public void printInfo() {
-        System.out.println("Id is : " + id);
-        System.out.println("Surname is : " + surname);
-        System.out.println("Education is : " + education);
-        System.out.println("Date of Birth : " + birthday);
-    }
-
     public int getId() {
         return id;
     }
@@ -55,8 +48,4 @@ public class Profession {
         boolean building;
     }
 
-    public static void main(String[] args) {
-        Programmer Yekutiel = new Programmer();
-        Yekutiel.printInfo();
-    }
 }
