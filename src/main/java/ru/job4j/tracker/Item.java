@@ -1,5 +1,8 @@
 package ru.job4j.tracker;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Item {
     private int id;
     private String name;
@@ -30,6 +33,14 @@ public class Item {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public static void main(String[] args) {
+        LocalDateTime created = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        String currentDateTimeFormatter = created.format(formatter);
+        System.out.println("Текущие дата и время : "
+                + currentDateTimeFormatter);
     }
 
 }
