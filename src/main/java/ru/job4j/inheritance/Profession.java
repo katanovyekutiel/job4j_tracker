@@ -31,48 +31,10 @@ public class Profession {
         return birthday;
     }
 
-    public class Doctor extends Profession() {
-        String diagnosis;
-    }
-
-    public class Surgeon extends Doctor() {
-        this.id = id;
-        this.surname = surname;
-        this.education = education;
-        this.birthday = birthday;
-        boolean operating;
-    }
-
-    public class Dentist extends Doctor() {
-        this.id = id;
-        this.surname = surname;
-        this.education = education;
-        this.birthday = birthday;
-        boolean treatsTeeth;
-    }
-
-    public class Engineer extends Profession() {
-        String project;
-    }
-
-    public class Programmer extends Engineer() {
-        this.id = id;
-        this.surname = surname;
-        this.education = education;
-        this.birthday = birthday;
-        boolean programming;
-    }
-
-    public class Builder extends Engineer() {
-        this.id = id;
-        this.surname = surname;
-        this.education = education;
-        this.birthday = birthday;
-        boolean building;
-    }
-
     public static void main(String[] args) {
         Programmer yekutiel = new Programmer();
+        yekutiel.getBirthday();
+        yekutiel.getSurname();
         yekutiel.printInfo();
     }
 }
