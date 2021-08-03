@@ -32,9 +32,7 @@ public class Profession {
     }
 
     public static void main(String[] args) {
-        Programmer yekutiel = new Programmer();
-        yekutiel.getBirthday();
-        yekutiel.getSurname();
-        yekutiel.printInfo();
+        JSONReport jsonReport = new JSONReport();
+        System.out.println(jsonReport);
     }
 }

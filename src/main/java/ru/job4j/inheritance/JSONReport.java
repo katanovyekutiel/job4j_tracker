@@ -10,7 +10,8 @@ public class JSONReport extends TextReport {
 
     public static void main(String[] args) {
         JSONReport jsonReport = new JSONReport();
-        text = jsonReport.generate("Report's name", "Report's body");
+        String text = jsonReport.generate("Report's name", "Report's body");
         System.out.println(text);
     }
+
 }
