@@ -6,7 +6,25 @@ public class Profession {
     private boolean education;
     private int birthday;
 
-    public Profession() {}
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public boolean isEducation() {
+        return education;
+    }
+
+    public void setEducation(boolean education) {
+        this.education = education;
+    }
+
+    public void setBirthday(int birthday) {
+        this.birthday = birthday;
+    }
 
     public void printInfo() {
         System.out.println("Id is : " + id);
@@ -32,7 +50,7 @@ public class Profession {
     }
 
     public static void main(String[] args) {
-        JSONReport jsonReport = new JSONReport();
-        System.out.println(jsonReport);
+        Programmer yekutiel = new Programmer();
+        System.out.println(yekutiel);
     }
 }
