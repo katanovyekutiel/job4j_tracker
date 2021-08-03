@@ -13,5 +13,4 @@ public class JSONReport extends TextReport {
         String text = jsonReport.generate("Report's name", "Report's body");
         System.out.println(text);
     }
-
 }
