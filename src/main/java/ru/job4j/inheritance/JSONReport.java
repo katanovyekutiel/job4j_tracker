@@ -7,4 +7,10 @@ public class JSONReport extends TextReport {
                 + System.lineSeparator() + "  body : " + body
                 + System.lineSeparator() + "}";
     }
+
+    public static void main(String[] args) {
+        JSONReport jsonReport = new JSONReport();
+        text = jsonReport.generate("Report's name", "Report's body");
+        System.out.println(text);
+    }
 }
