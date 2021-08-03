@@ -6,6 +6,15 @@ import java.time.format.DateTimeFormatter;
 public class Item {
     private int id;
     private String name;
+    private LocalDateTime created = LocalDateTime.now();
+
+    public LocalDateTime getCreated() {
+        return created;
+    }
+
+    public void setCreated(LocalDateTime created) {
+        this.created = created;
+    }
 
     public Item() {
     }
