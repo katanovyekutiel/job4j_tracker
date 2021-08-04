@@ -6,23 +6,10 @@ public class Profession {
     private boolean education;
     private int birthday;
 
-    public void setId(int id) {
+    public Profession(int id, String surname, boolean education, int birthday) {
         this.id = id;
-    }
-
-    public void setSurname(String surname) {
         this.surname = surname;
-    }
-
-    public boolean isEducation() {
-        return education;
-    }
-
-    public void setEducation(boolean education) {
         this.education = education;
-    }
-
-    public void setBirthday(int birthday) {
         this.birthday = birthday;
     }
 
@@ -33,24 +20,10 @@ public class Profession {
         System.out.println("Date of Birth : " + birthday);
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public boolean getEducation() {
-        return education;
-    }
-
-    public int getBirthday() {
-        return birthday;
-    }
-
     public static void main(String[] args) {
-        Programmer yekutiel = new Programmer();
-        System.out.println(yekutiel);
+        Programmer yekutiel = new Programmer(1, "Kaatnov", true, 1983, "Job4j", true);
+        yekutiel.printInfo();
+        yekutiel.printInfoProject();
+        yekutiel.printInfoProgramming();
     }
 }
