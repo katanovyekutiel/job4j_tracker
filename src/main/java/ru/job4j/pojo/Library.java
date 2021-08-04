@@ -11,8 +11,7 @@ public class Library {
         book[1] = bestResult;
         book[2] = liveRebe;
         book[3] = chabad;
-        for (int i = 0; i < book.length; i++) {
-            Books bk = book[i];
+        for (Books bk : book) {
             System.out.println(bk.getBook() + " - " + bk.getPages());
         }
         System.out.println("Replace book[0] and book[3].");
@@ -20,18 +19,14 @@ public class Library {
         tmp[0] = book[0];
         book[0] = book[3];
         book[3] = tmp[0];
-        for (int i = 0; i < book.length; i++) {
-            Books bk = book[i];
+        for (Books bk : book) {
             System.out.println(bk.getBook() + " - " + bk.getPages());
         }
         System.out.println("Show only book - \"Clean code\".");
-        for (int i = 0; i < book.length; i++) {
-            Books bk = book[i];
-            if (bk.getBook().equals("Clean code")) {
+        for (Books bk : book) {
+            if ("Clean code".equals(book.getClass())) {
                 System.out.println(bk.getBook() + " - " + bk.getPages());
             }
         }
-
-
     }
 }
