@@ -15,10 +15,9 @@ public class Library {
             System.out.println(bk.getBook() + " - " + bk.getPages());
         }
         System.out.println("Replace book[0] and book[3].");
-        Books[] tmp = new Books[1];
-        tmp[0] = book[0];
+        Books tmp = book[0];
         book[0] = book[3];
-        book[3] = tmp[0];
+        book[3] = tmp;
         for (Books bk : book) {
             System.out.println(bk.getBook() + " - " + bk.getPages());
         }
