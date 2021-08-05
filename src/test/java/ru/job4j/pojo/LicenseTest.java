@@ -12,6 +12,8 @@ public class LicenseTest extends TestCase {
         first.setCode("audio");
         License second = new License();
         second.setCode("audio");
+        boolean expected = true;
+        boolean eq = License.comparison(first, second);
         assertThat(first, is(second));
     }
 }

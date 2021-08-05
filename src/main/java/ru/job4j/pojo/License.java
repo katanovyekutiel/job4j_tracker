@@ -12,7 +12,10 @@ public class License {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         License license = (License) o;
-        return owner.equals(license.owner) && model.equals(license.model) && code.equals(license.code) && created.equals(license.created);
+        return owner.equals(license.owner)
+                && model.equals(license.model)
+                && code.equals(license.code)
+                && created.equals(license.created);
     }
 
     private String code;
@@ -56,8 +59,9 @@ public class License {
         this.created = created;
     }
 
-    public boolean comparison(String first, String second) {
+    public static boolean comparison(String first, String second) {
         boolean eq = first.equals(second);
         return eq;
     }
+
 }
