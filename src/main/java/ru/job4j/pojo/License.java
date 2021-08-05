@@ -1,11 +1,27 @@
 package ru.job4j.pojo;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class License {
     private String owner;
     private String model;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        License license = (License) o;
+        return owner.equals(license.owner) && model.equals(license.model) && code.equals(license.code) && created.equals(license.created);
+    }
+
     private String code;
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(owner, model, code, created);
+    }
+
     private Date created;
 
     public String getOwner() {
@@ -38,5 +54,10 @@ public class License {
 
     public void setCreated(Date created) {
         this.created = created;
+    }
+
+    public boolean comparison(String first, String second) {
+        boolean eq = first.equals(second);
+        return eq;
     }
 }
