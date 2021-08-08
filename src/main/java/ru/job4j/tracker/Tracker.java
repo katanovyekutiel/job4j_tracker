@@ -13,7 +13,7 @@ public class Tracker {
         return item;
     }
 
-    public Item findAll(){
+    public Item[] findAll(){
         return Arrays.copyOf(items, size);
     }
 
@@ -29,7 +29,7 @@ public class Tracker {
         return rsl;
     }
 
-    public Item findByName(String key) {
+    public Item[] findByName(String key) {
         Item[] rsl = new Item[size];
         int count = 0;
         for (int index = 0; index < size; index++) {
@@ -39,4 +39,5 @@ public class Tracker {
         }
         return Arrays.copyOf(rsl, count);
     }
+
 }
