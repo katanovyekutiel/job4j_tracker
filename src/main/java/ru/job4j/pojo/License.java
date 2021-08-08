@@ -6,25 +6,7 @@ import java.util.Objects;
 public class License {
     private String owner;
     private String model;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        License license = (License) o;
-        return owner.equals(license.owner)
-                && model.equals(license.model)
-                && code.equals(license.code)
-                && created.equals(license.created);
-    }
-
     private String code;
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(owner, model, code, created);
-    }
-
     private Date created;
 
     public String getOwner() {
@@ -59,9 +41,27 @@ public class License {
         this.created = created;
     }
 
-    public static boolean comparison(String first, String second) {
-        boolean eq = first.equals(second);
-        return eq;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        License license = (License) o;
+        return Objects.equals(owner, license.owner)
+                && Objects.equals(model, license.model)
+                && Objects.equals(code, license.code)
+                && Objects.equals(created, license.created);
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(owner, model, code, created);
+    }
+
+    public void eqName() {
+        License first = new License("audio");
+        License second = new License("audio");
+        boolean eq = first.equals(second);
+        System.out.println(eq);
+    }
 }
+
