@@ -1,19 +1,17 @@
 package ru.job4j.pojo;
 
-import junit.framework.TestCase;
-
-import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
+import static org.hamcrest.Matchers.is;
+import org.junit.Test;
 
-public class LicenseTest extends TestCase {
+public class LicenseTest {
 
-    public void testComparison() {
+    @Test
+    public void eqName() {
         License first = new License();
         first.setCode("audio");
         License second = new License();
         second.setCode("audio");
-        boolean expected = true;
-        boolean eq = License.comparison(first, second);
         assertThat(first, is(second));
     }
 }
