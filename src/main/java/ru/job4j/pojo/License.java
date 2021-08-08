@@ -57,11 +57,5 @@ public class License {
         return Objects.hash(owner, model, code, created);
     }
 
-    public void eqName() {
-        License first = new License("audio");
-        License second = new License("audio");
-        boolean eq = first.equals(second);
-        System.out.println(eq);
-    }
 }
 
