@@ -23,6 +23,12 @@ public class Tracker {
         return false;
     }
 
+    public boolean delete(int id) {
+        int index = indexOf(id);
+        System.arraycopy(index, size - 1 - index, index - 1, items.length - index);
+        return true;
+    }
+
     public Item[] findAll(){
         return Arrays.copyOf(items, size);
     }
