@@ -1,11 +1,14 @@
 package ru.job4j.tracker;
 
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
 public class Tracker {
     private final Item[] items = new Item[100];
     private int ids = 1;
     private int size = 0;
+    private static final DateTimeFormatter FORMATTER
+            = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
 
     public Item add(Item item) {
         item.setId(ids++);
@@ -69,4 +72,12 @@ public class Tracker {
         return rsl;
     }
 
+    @Override
+    public String toString() {
+        return "Tracker{" +
+                "items=" + Arrays.toString(items) +
+                ", ids=" + ids +
+                ", size=" + size +
+                '}';
+    }
 }
