@@ -25,8 +25,12 @@ public class Tracker {
 
     public boolean delete(int id) {
         int index = indexOf(id);
-        System.arraycopy(index, size - 1 - index, index - 1, items.length - index);
-        return true;
+        if (index != -1) {
+            System.arraycopy(items, index + 1, items, index, size - index - 1);
+            items[size - 1] = null;
+            size--;
+        }
+        return index != -1;
     }
 
     public Item[] findAll(){
@@ -59,4 +63,5 @@ public class Tracker {
         }
         return rsl;
     }
+
 }
