@@ -4,9 +4,9 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class StartUI {
+
     public static void main(String[] args) {
-        Item item = new Item();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
-        System.out.println("Текущие дата и время: " + item.getCreated().format(formatter));
+        Item item = new Item(1, "Yekutiel");
+        System.out.println(item);
     }
 }
