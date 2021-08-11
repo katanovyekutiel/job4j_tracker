@@ -22,10 +22,8 @@ public class Tracker {
         if (rsl) {
             item.setId(id);
             items[index] = item;
-        } else {
-            return false;
         }
-        return true;
+        return rsl;
     }
 
     public boolean delete(int id) {
@@ -35,10 +33,8 @@ public class Tracker {
             System.arraycopy(items, index + 1, items, index, size - index - 1);
             items[size - 1] = null;
             size--;
-        } else {
-            return false;
         }
-        return index != -1;
+        return rsl;
     }
 
     public Item[] findAll(){
