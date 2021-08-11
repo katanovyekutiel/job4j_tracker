@@ -44,5 +44,4 @@ public class PointTest {
         double out = a.distance3d(b);
         Assert.assertEquals(expected3, out, 0.01);
     }
-
 }
