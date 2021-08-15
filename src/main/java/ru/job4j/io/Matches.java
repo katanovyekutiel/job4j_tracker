@@ -13,12 +13,13 @@ public class Matches {
             System.out.println(player + " введите число от 1 до 3:");
             int matches = Integer.parseInt(input.nextLine());
             if (matches == 1 || matches == 2 || matches == 3) {
+                System.out.println("Введено неверное значение: выберите число от 1 до 3, обращая внимание на оставшиеся спички!");
+                continue;
+            }
                 turn = !turn;
                 count = count - matches;
                 System.out.println("На столе осталось " + count + " спичек");
-            } else if (count < matches) {
-                System.out.println(player + "введено неверное значение, обратите внимение на оставшиеся спички!");
-            } else if (count > matches) {
+                if (count > matches) {
                 System.out.println(player + " введите число от 1 до 3 : На столе осталось " + count + " спичек");
             }
 
