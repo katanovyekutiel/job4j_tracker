@@ -16,19 +16,17 @@ public class Matches {
                 turn = !turn;
                 count = count - matches;
                 System.out.println("На столе осталось " + count + " спичек");
-            }else if (count < matches) {
+            } else if (count < matches) {
                 System.out.println(player + "введено неверное значение, обратите внимение на оставшиеся спички!");
             } else if (count > matches) {
                 System.out.println(player + " введите число от 1 до 3 : На столе осталось " + count + " спичек");
-            } else if (count == 0) {
-                System.out.println("Поздравляем! " + player + " Вы выиграли!");
-                turn = false;
-            } else if (count < 0) {
-                System.out.println(player + "Вы проиграли! будьте внимательны.");
-                turn = false;
-            } else {
-                System.out.println("введено неверное значение");
             }
+
         }
+            if (!turn) {
+                System.out.println("Выиграл первай игрок");
+            } else {
+                System.out.println("Выиграл второй игрок");
+            }
     }
 }
