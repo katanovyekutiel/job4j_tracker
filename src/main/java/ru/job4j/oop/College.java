@@ -5,8 +5,5 @@ public class College {
         Freshman freshman = new Freshman();
         Student stdt = freshman;
         Object obj = freshman;
-        System.out.println(new Freshman());
-        System.out.println(new Student());
-        System.out.println(new Object());
     }
 }
