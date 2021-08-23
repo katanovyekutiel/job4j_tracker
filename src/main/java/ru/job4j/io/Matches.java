@@ -12,7 +12,7 @@ public class Matches {
             String player = turn ? "Первый игрок" : "Второй игрок";
             System.out.println(player + " введите число от 1 до 3:");
             int matches = Integer.parseInt(input.nextLine());
-            if (matches == 1 || matches == 2 || matches == 3) {
+            if (matches < 1 || matches > 3 || matches > count) {
                 System.out.println("Введено неверное значение: выберите число от 1 до 3, обращая внимание на оставшиеся спички!");
                 continue;
             }
