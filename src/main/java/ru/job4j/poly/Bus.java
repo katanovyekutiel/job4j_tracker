@@ -9,12 +9,12 @@ public class Bus implements Transport {
 
     @Override
     public void passenger(int passenger) {
-        System.out.println("Количество пассажиров: 25");
+        System.out.println("Количество пассажиров: " + passenger);
     }
 
     @Override
     public int price(int refuel) {
-
-        return 0;
+        int liters = 50;
+        return 60 * liters;
     }
 }
