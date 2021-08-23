@@ -19,10 +19,6 @@ public class Matches {
                 turn = !turn;
                 count = count - matches;
                 System.out.println("На столе осталось " + count + " спичек");
-                if (count > matches) {
-                System.out.println(player + " введите число от 1 до 3 : На столе осталось " + count + " спичек");
-            }
-
         }
             if (!turn) {
                 System.out.println("Выиграл первай игрок");
