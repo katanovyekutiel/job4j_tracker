@@ -13,7 +13,7 @@ public class Bus implements Transport {
     }
 
     @Override
-    public int price(int refuel) {
+    public int refuel(int price) {
         int liters = 50;
         return 60 * liters;
     }
