@@ -73,6 +73,16 @@ public class StartUI {
         }
     }
 
+    public static void replaceItem(Input input, Tracker tracker) {
+        System.out.println("=== Update item ===");
+        int id = input.askInt("Enter id: ");
+        String name = input.askStr("Enter a new name of item: ");
+        Item item = new Item(name);
+        item.setId(id);
+        tracker.replace(id, item);
+
+    }
+
     public void init(Input input, Tracker tracker) {
         boolean run = true;
         while (run) {
@@ -92,6 +102,8 @@ public class StartUI {
             } else if (select == 5) {
                 StartUI.findItemByName(input, tracker);
             } else if (select == 6) {
+                StartUI.replaceItem(input, tracker);
+            } else if (select == 7) {
                 run = false;
             }
         }
@@ -102,7 +114,7 @@ public class StartUI {
         String[] menu = {
                 "Add new Item", "Show all items", "Edit item",
                 "Delete item", "Find item by id", "Find items by name",
-                "Exit Program"
+                "Replace item", "Exit Program"
         };
         System.out.println("Menu:");
         for (int i = 0; i < menu.length; i++) {
