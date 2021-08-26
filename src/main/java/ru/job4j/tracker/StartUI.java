@@ -10,9 +10,9 @@ public class StartUI {
         System.out.println("Добавленная заявка: " + item);
     }
 
-    public static void showAllItem() {
+    public static void showAllItem(Input input, Tracker tracker) {
         System.out.println("=== Show all items ===");
-        Item[] items = Tracker.findAll();
+        Item[] items = tracker.findAll();
         if (items.length > 0) {
             for (Item item : items) {
                 System.out.println(item);
@@ -22,7 +22,7 @@ public class StartUI {
         }
     }
 
-    public static void editItem(int id) {
+    public static void editItem(Input input, Tracker tracker) {
         System.out.println("=== Edit item ===");
         System.out.println("Enter id: ");
         int id = Integer.parseInt(input.askStr("Select: "));
@@ -36,7 +36,7 @@ public class StartUI {
         }
     }
 
-    public static void deleteItem(int id) {
+    public static void deleteItem(Input input, Tracker tracker) {
         System.out.println("=== Delete item ===");
         System.out.println("Enter id: ");
         int id = Integer.parseInt(input.askStr("Select: "));
@@ -47,7 +47,7 @@ public class StartUI {
         }
     }
 
-    public static void findItemById(int id) {
+    public static void findItemById(Input input, Tracker tracker) {
         System.out.println("=== Find item by id ===");
         System.out.println("Enter id: ");
         int id = Integer.parseInt(input.askStr("Select: "));
@@ -59,7 +59,7 @@ public class StartUI {
         }
     }
 
-    public static void findItemByName(String name) {
+    public static void findItemByName(Input input, Tracker tracker) {
         System.out.println("=== Find item by name ===");
         System.out.println("Enter name: ");
         String name = input.askStr("Select: ");
@@ -82,15 +82,15 @@ public class StartUI {
             if (select == 0) {
                 StartUI.createItem(input, tracker);
             } else if (select == 1) {
-                StartUI.showAllItem();
+                StartUI.showAllItem(input, tracker);
             } else if (select == 2) {
-                StartUI.editItem();
+                StartUI.editItem(input, tracker);
             } else if (select == 3) {
-                StartUI.deleteItem();
+                StartUI.deleteItem(input, tracker);
             } else if (select == 4) {
-                StartUI.findItemById();
+                StartUI.findItemById(input, tracker);
             } else if (select == 5) {
-                StartUI.findItemByName();
+                StartUI.findItemByName(input, tracker);
             } else if (select == 6) {
                 run = false;
             }
