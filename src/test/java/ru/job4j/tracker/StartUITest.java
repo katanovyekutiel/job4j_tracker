@@ -38,7 +38,7 @@ public class StartUITest {
         String[] answers = {
                 String.valueOf(item.getId()), "replaced item"
         };
-        StartUI.replaceItem(new StubInput(answers), tracker);
+        StartUI.editItem(new StubInput(answers), tracker);
         Item replaced = tracker.findById(item.getId());
         assertThat(replaced.getName(), is("replaced item"));
     }
@@ -51,6 +51,6 @@ public class StartUITest {
         String[] answers = {String.valueOf(item.getId()), null};
         StartUI.deleteItem(new StubInput(answers), tracker);
         Item delete = tracker.findById(item.getId());
-        assertThat(delete.getName(), is("null"));
+        assertNull(delete);
     }
 }
