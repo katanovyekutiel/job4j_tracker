@@ -1,11 +1,9 @@
 package ru.job4j.tracker;
 
 import org.junit.Test;
-
-import java.util.Scanner;
-
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.nullValue;
+import static org.junit.Assert.assertThat;
 
 public class StartUITest {
     @Test
@@ -30,7 +28,7 @@ public class StartUITest {
         /* Входные данные должны содержать ID добавленной заявки item.getId() */
         String replacedName = "New item name";
         Input in = new StubInput(
-                new String[] {"2", "New item name" /* входные параметры для ReplaceAction */, "6"}
+                new String[] {"0", "Item ID", "Item Name" /* входные параметры для ReplaceAction */, "1"}
         );
         UserAction[] actions = {
                 new ReplaceAction(),
@@ -47,7 +45,7 @@ public class StartUITest {
         Item item = tracker.add(new Item("Deleted item"));
         /* Входные данные должны содержать ID добавленной заявки item.getId() */
         Input in = new StubInput(
-                new String[] {"3", "Item ID" /* входные параметры для DeleteAction */, "6"}
+                new String[] {"0", "Item ID" /* входные параметры для DeleteAction */, "1"}
         );
         UserAction[] actions = {
                 new DeleteAction(),
