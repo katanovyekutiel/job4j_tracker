@@ -85,8 +85,7 @@ public class StartUITest {
                 new FindItemByNameAction(out)
         };
         new StartUI(out).init(in, tracker, actions);
-        assertThat(tracker.findById(item.getId()), is(itemValue()));
-        assertThat(tracker.findByName(item.getName()), is(itemValue()));
+        assertThat(tracker.findById(item.getId()) && tracker.findByName(item.getName()), is(itemValue()));
     }
 
     @Test
