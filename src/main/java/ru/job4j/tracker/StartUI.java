@@ -15,13 +15,8 @@ public class StartUI {
     }
 
     private void showMenu(UserAction[] actions) {
-        String[] menu = {
-                "Add new Item", "Show all items", "Replace item",
-                "Delete item", "Find item by id", "Find items by name",
-                "Exit Program"
-        };
         System.out.println("Menu:");
-        for (int index = 0; index < menu.length; index++) {
+        for (int index = 0; index < actions.length; index++) {
             System.out.println(index + ". " + actions[index].name());
         }
     }
