@@ -11,5 +11,4 @@ public class Fact {
         }
         return rsl;
     }
-
 }
