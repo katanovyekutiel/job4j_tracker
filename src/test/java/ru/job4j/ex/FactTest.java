@@ -1,12 +1,14 @@
 package ru.job4j.ex;
 
-import junit.framework.TestCase;
+import org.hamcrest.core.Is;
 import org.junit.Test;
+import static org.junit.Assert.assertThat;
 
-public class FactTest extends TestCase {
+public class FactTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void whenNLessThen0() {
         new Fact().calc(-1);
     }
+
 }
