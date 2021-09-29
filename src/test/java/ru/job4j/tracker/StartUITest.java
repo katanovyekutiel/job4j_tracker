@@ -143,7 +143,7 @@ public class StartUITest {
     public void whenInvalidExit() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"0", String.valueOf(ValidateInput.class), "1"}
+                new String[] {"1000", "0"}
         );
         Tracker tracker = new Tracker();
         UserAction[] actions = new UserAction[]{
