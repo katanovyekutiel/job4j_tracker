@@ -4,7 +4,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
 public class Tracker {
-    private final Item[] items = new Item[100];
+    private final List<Item> items = new Item[100];
     private int ids = 1;
     private int size = 0;
 
@@ -19,7 +19,7 @@ public class Tracker {
         boolean rsl = index != -1;
         if (rsl) {
             item.setId(id);
-            items[index] = item;
+            items.get(index) = item;
         }
         return rsl;
     }
@@ -29,7 +29,7 @@ public class Tracker {
         boolean rsl = index != -1;
         if (rsl) {
             System.arraycopy(items, index + 1, items, index, size - index - 1);
-            items[size - 1] = null;
+            items.get(size - 1) = null;
             size--;
         }
         return rsl;
@@ -41,15 +41,15 @@ public class Tracker {
 
     public Item findById(int id) {
         int index = indexOf(id);
-        return index != -1 ? items[index] : null;
+        return index != -1 ? items.get(index) : null;
     }
 
     public Item[] findByName(String key) {
-        Item[] rsl = new Item[size];
+        List<Item> rsl = new Item[size];
         int count = 0;
         for (int index = 0; index < size; index++) {
-            if (items[index].getName().equals(key)) {
-                rsl[count++] = items[index];
+            if (items.get(index).getName().equals(key)) {
+                rsl[count++] = items.get(index);
             }
         }
         return Arrays.copyOf(rsl, count);
@@ -58,7 +58,7 @@ public class Tracker {
     private int indexOf(int id) {
         int rsl = -1;
         for (int index = 0; index < size; index++) {
-            if (items[index].getId() == id) {
+            if (items.get(index).getId() == id) {
                 rsl = index;
                 break;
             }
