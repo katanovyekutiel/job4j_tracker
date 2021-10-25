@@ -12,7 +12,7 @@ public class UniqueText {
             check.add(orig);
         }
         for (String tex : text) {
-            if (!check.contains(duplicateText)) {
+            if (!check.contains(originText)) {
                 rsl = false;
                 break;
             }
