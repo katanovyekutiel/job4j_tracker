@@ -2,15 +2,16 @@ package ru.job4j.tracker;
 
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
+import java.util.List;
 
 public class Tracker {
-    private final List<Item> items = new Item[100];
+    private final List<Item> items = List.of(new Item[100]);
     private int ids = 1;
     private int size = 0;
 
     public Item add(Item item) {
         item.setId(ids++);
-        items[size++] = item;
+        items.set(size++, item);
         return item;
     }
 
@@ -45,11 +46,11 @@ public class Tracker {
     }
 
     public Item[] findByName(String key) {
-        List<Item> rsl = new Item[size];
+        List<Item> rsl = List.of(new Item[size]);
         int count = 0;
         for (int index = 0; index < size; index++) {
             if (items.get(index).getName().equals(key)) {
-                rsl[count++] = items.get(index);
+                rsl.set(count++, items.get(index));
             }
         }
         return Arrays.copyOf(rsl, count);
